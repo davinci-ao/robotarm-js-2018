@@ -7,23 +7,24 @@
             var canvas = document.getElementById("canvas");
             var robotArm = new RobotArm(canvas);
             // Het level inladen
-            robotArm.loadLevel("exercise 11");
+            robotArm.loadLevel("exercise 12");
             
             // Jou instructies volgen hier
-            for (right=0; right<9; right++){
-                robotArm.moveRight();
-            }
-            for (row=0; row<9; row++){
+            for (row=1; row<10; row++){
                 robotArm.grab();
                 var color = robotArm.scan();
-                if (color == 'white'){
-                    robotArm.moveRight();
-                    robotArm.drop();
+                if (color == 'red'){
+                    for (block=9; block<=row; block++){
+                        robotArm.moveRight();
+                        robotArm.drop();
+                    for (left=0; left<=row; left++){
                     robotArm.moveLeft();
+                    }                        
+                    }
                 }else{
-                    robotArm.drop();
+                    robotArm.drop();                    
                 }
-                robotArm.moveLeft();
+                robotArm.moveRight();
             }
             // De door jou opgegeven instructies uitvoeren
             robotArm.run();
