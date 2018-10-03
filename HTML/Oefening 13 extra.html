@@ -7,25 +7,47 @@
             var canvas = document.getElementById("canvas");
             var robotArm = new RobotArm(canvas);
             // Het level inladen
-            robotArm.randomLevel( 3, 8);
+            robotArm.randomLevel( 1, 8);
             
             // Jou instructies volgen hier
             var blocks = "undone"
-            var counter = 10
             while (blocks == "undone"){
                 robotArm.grab();
                 color = robotArm.scan();
                 if (color == null){
                     blocks = "done";
-                }else{
-                    for (row=1; row<counter; row++){
+                }else if (color == "red");{  
+                    for (right=0; right<10; right++){
                         robotArm.moveRight();
                     }
-                        robotArm.drop();
-                    for (back=0; back<=row; back++){
+                    robotArm.drop();
+                    for (left=0; left<10; left++){
                         robotArm.moveLeft();
                     }
-                    counter--;
+                }else if (color == "green");{  
+                    for (right=0; right<9; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<9; left++){
+                        robotArm.moveLeft();
+                    }
+                }else if (color == "blue");{  
+                    for (right=0; right<8; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<8; left++){
+                        robotArm.moveLeft();
+                    }
+                }else if (color == "white");{  
+                    for (right=0; right<7; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<7; left++){
+                        robotArm.moveLeft();
+                    }
                 }
             }
             // De door jou opgegeven instructies uitvoeren
