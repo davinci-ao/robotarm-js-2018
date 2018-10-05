@@ -1,0 +1,273 @@
+<html>
+    <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script src="../JS/robot-arm 13.js"></script>
+        <script>
+            // Robotarm bibliotheek inladen
+            var canvas = document.getElementById("canvas");
+            var robotArm = new RobotArm(canvas);
+            // Het level inladen
+            robotArm.randomLevel( 6, 8);
+            
+            // Jou instructies volgen hier
+            //eerste rij
+            var blocks = "undone"
+            while (blocks == "undone"){
+                robotArm.grab();
+                color = robotArm.scan();
+                if (color == null){
+                    blocks = "done";
+                }else if (color == "red"){  
+                    for (right=0; right<9; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<9; left++){
+                        robotArm.moveLeft();
+                    }
+                }else if (color == "green"){
+                    for (right=0; right<8; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<8; left++){
+                        robotArm.moveLeft();
+                    }
+                }else if (color == "blue"){  
+                    for (right=0; right<7; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<7; left++){
+                        robotArm.moveLeft();
+                    }
+                }else if (color == "white"){  
+                    for (right=0; right<6; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<6; left++){
+                        robotArm.moveLeft();
+                    }
+                }
+            }
+            robotArm.moveRight();
+
+            //tweede rij
+            blocks = "undone"
+            while (blocks == "undone"){
+                robotArm.grab();
+                color = robotArm.scan();
+                if (color == null){
+                    blocks = "done";
+                }else if (color == "red"){  
+                    for (right=0; right<8; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<8; left++){
+                        robotArm.moveLeft();
+                    }
+                }else if (color == "green"){
+                    for (right=0; right<7; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<7; left++){
+                        robotArm.moveLeft();
+                    }
+                }else if (color == "blue"){  
+                    for (right=0; right<6; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<6; left++){
+                        robotArm.moveLeft();
+                    }
+                }else if (color == "white"){  
+                    for (right=0; right<5; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<5; left++){
+                        robotArm.moveLeft();
+                    }
+                }
+            }
+            robotArm.moveRight();
+
+            //derde rij
+            blocks = "undone"
+            while (blocks == "undone"){
+                robotArm.grab();
+                color = robotArm.scan();
+                if (color == null){
+                    blocks = "done";
+                }else if (color == "red"){  
+                    for (right=0; right<7; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<7; left++){
+                        robotArm.moveLeft();
+                    }
+                }else if (color == "green"){
+                    for (right=0; right<6; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<6; left++){
+                        robotArm.moveLeft();
+                    }
+                }else if (color == "blue"){  
+                    for (right=0; right<5; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<5; left++){
+                        robotArm.moveLeft();
+                    }
+                }else if (color == "white"){  
+                    for (right=0; right<4; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<4; left++){
+                        robotArm.moveLeft();
+                    }
+                }
+            }
+            robotArm.moveRight();
+
+            //vierde rij
+            blocks = "undone"
+            while (blocks == "undone"){
+                robotArm.grab();
+                color = robotArm.scan();
+                if (color == null){
+                    blocks = "done";
+                }else if (color == "red"){  
+                    for (right=0; right<6; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<6; left++){
+                        robotArm.moveLeft();
+                    }
+                }else if (color == "green"){
+                    for (right=0; right<5; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<5; left++){
+                        robotArm.moveLeft();
+                    }
+                }else if (color == "blue"){  
+                    for (right=0; right<4; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<4; left++){
+                        robotArm.moveLeft();
+                    }
+                }else if (color == "white"){  
+                    for (right=0; right<3; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<3; left++){
+                        robotArm.moveLeft();
+                    }
+                }
+            }
+            robotArm.moveRight();
+
+            //vijfde rij
+            blocks = "undone"
+            while (blocks == "undone"){
+                robotArm.grab();
+                color = robotArm.scan();
+                if (color == null){
+                    blocks = "done";
+                }else if (color == "red"){  
+                    for (right=0; right<5; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<5; left++){
+                        robotArm.moveLeft();
+                    }
+                }else if (color == "green"){
+                    for (right=0; right<4; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<4; left++){
+                        robotArm.moveLeft();
+                    }
+                }else if (color == "blue"){  
+                    for (right=0; right<3; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<3; left++){
+                        robotArm.moveLeft();
+                    }
+                }else if (color == "white"){  
+                    for (right=0; right<2; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<2; left++){
+                        robotArm.moveLeft();
+                    }
+                }
+            }
+            robotArm.moveRight();
+
+            //zesde rij
+            blocks = "undone"
+            while (blocks == "undone"){
+                robotArm.grab();
+                color = robotArm.scan();
+                if (color == null){
+                    blocks = "done";
+                }else if (color == "red"){  
+                    for (right=0; right<4; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<4; left++){
+                        robotArm.moveLeft();
+                    }
+                }else if (color == "green"){
+                    for (right=0; right<3; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<3; left++){
+                        robotArm.moveLeft();
+                    }
+                }else if (color == "blue"){  
+                    for (right=0; right<2; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<2; left++){
+                        robotArm.moveLeft();
+                    }
+                }else if (color == "white"){  
+                    for (right=0; right<1; right++){
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for (left=0; left<1; left++){
+                        robotArm.moveLeft();
+                    }
+                }
+            }                            
+            // De door jou opgegeven instructies uitvoeren
+            robotArm.run();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+    <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script src="../JS/robot-arm 13 extra manier 2.js"></script>
+        <script>
+            // Robotarm bibliotheek inladen
+            var canvas = document.getElementById("canvas");
+            var robotArm = new RobotArm(canvas);
+            // Het level inladen
+            robotArm.randomLevel( 6, 8);
+            
+            // Jou instructies volgen hier
+            var row = 9
+            while (row >=4){
+                robotArm.grab();
+                color = robotArm.scan();
+                if (color == null ){
+                    row=row - 1
+                    robotArm.moveRight();
+                }else if (color == "red"){
+                    for (right=0; right<=row-1; right++){
+                        robotArm.moveRight();
+                    }
+                        robotArm.drop();
+                    for (left=0; left<=row-1; left++){
+                        robotArm.moveLeft();
+                    }
+                }else if (color == "green"){
+                    for (right=0; right<=row-2; right++){
+                        robotArm.moveRight();
+                    }
+                        robotArm.drop();
+                    for (left=0; left<=row-2; left++){
+                        robotArm.moveLeft();
+                    }
+                }else if (color == "blue"){
+                    for (right=0; right<=row-3; right++){
+                        robotArm.moveRight();
+                    }
+                        robotArm.drop();
+                    for (left=0; left<=row-3; left++){
+                        robotArm.moveLeft();
+                    }
+                }else if (color == "white"){
+                    for (right=0; right<=row-4; right++){
+                        robotArm.moveRight();
+                    }
+                        robotArm.drop();
+                    for (left=0; left<=row-4; left++){
+                        robotArm.moveLeft();
+                    }
+                }
+            }            
+            // De door jou opgegeven instructies uitvoeren
+            robotArm.run();
+        </script>
+    </body>
+</html>
