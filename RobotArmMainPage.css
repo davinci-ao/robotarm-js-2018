@@ -1,0 +1,44 @@
+body{
+	background:url("BlueBackground.png") no-repeat center center fixed
+}
+div{
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-left: 20px;
+	width: 54%;
+	float: left;
+	font-size: 20px;
+	border-style: solid;
+	border-color: black;
+	border-width: 4px;
+	border-radius: 5px;
+	padding: 10px;
+	margin-right: 20px;
+	font-family: Roboto;
+}
+.header{
+	font-size: 40px;
+	margin: 10px;
+}
+.divheader{
+	margin-bottom: 20px;
+	width: 60%;
+}
+.button{
+	font-family: georgia;
+	font-weight: bolder;
+	margin: 5px;
+	margin-left: 10px;
+	border-radius: 5px;
+	font-size: 20px;
+	padding: 10px;
+	width: 250px;
+	color: black;
+	background-color: #17E1C7;
+	border-color: #5E471C;
+}
+.button:hover {background-color: #23B1EC}
+.button:active {
+	background-color: #178AE1;
+	transform: translateY(2px);
+}
